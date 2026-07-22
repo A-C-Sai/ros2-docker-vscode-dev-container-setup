@@ -60,7 +60,13 @@ RUN wget -q -O- https://packagecloud.io/dcommander/virtualgl/gpgkey | \
 #   - python3-pip:      Python package manager for ROS2 Python packages
 # -----------------------------------------------------------------------------
 RUN apt-get update -y && apt-get install -y \
-        ros-${ROS_DISTRO}-ros-gz \
+        ros-${ROS_DISTRO}-ros-gz* \
+		ros-${ROS_DISTRO}-*-ros2-control \
+		ros-${ROS_DISTRO}-turtlesim \
+		ros-${ROS_DISTRO}-robot-localization \
+		ros-${ROS_DISTRO}-joy \
+		ros-${ROS_DISTRO}-joy-teleop \
+		ros-${ROS_DISTRO}-tf-trnasformations \
         ros-${ROS_DISTRO}-gz-ros2-control \
         ros-${ROS_DISTRO}-gz-ros2-control-demos \
         ros-${ROS_DISTRO}-joint-state-publisher-gui \
@@ -69,13 +75,14 @@ RUN apt-get update -y && apt-get install -y \
         ros-${ROS_DISTRO}-ros2-control \
         ros-${ROS_DISTRO}-ros2-controllers \
         ros-${ROS_DISTRO}-urdf-tutorial \
-	ros-${ROS_DISTRO}-turtlebot* \
-	ros-${ROS_DISTRO}-navigation2 \
-	ros-${ROS_DISTRO}-nav2-bringup \
-	ros-${ROS_DISTRO}-nav2-minimal-tb* \
+		ros-${ROS_DISTRO}-turtlebot* \
+		ros-${ROS_DISTRO}-navigation2 \
+		ros-${ROS_DISTRO}-nav2-bringup \
+		ros-${ROS_DISTRO}-nav2-minimal-tb* \
         libserial-dev \
         python3-pip \
-    && rm -rf /var/lib/apt/lists/*
+        python3-transforms3d \
+    	&& rm -rf /var/lib/apt/lists/*
 
 # -----------------------------------------------------------------------------
 # Section 5: Non-Root User Creation
