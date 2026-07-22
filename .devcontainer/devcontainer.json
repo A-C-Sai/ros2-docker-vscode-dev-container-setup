@@ -84,8 +84,9 @@
     "vscode": {
       "extensions": [
         "ms-vscode.cpptools",
-        "ranch-hand-robotics.rde-pack",
-        "ranch-hand-robotics.rde-ros-2",
+        "Ranch-Hand-Robotics.rde-pack",
+        "Ranch-Hand-Robotics.rde-ros-2",
+        "Ranch-Hand-Robotics.urdf-editor",
         "twxs.cmake",
         "ms-vscode.cmake-tools",
         "redhat.vscode-xml",
