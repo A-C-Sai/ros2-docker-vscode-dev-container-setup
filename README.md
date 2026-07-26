@@ -1,4 +1,4 @@
-# ROS2 Jazzy — VS Code Dev Container Setup
+# ROS2 Jazzy — Docker + VS Code Dev Container Setup
 
 ## Workflow
 
